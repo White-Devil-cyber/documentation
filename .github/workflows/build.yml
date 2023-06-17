@@ -32,9 +32,9 @@ jobs:
       - name: Setting .env
         run: |
           touch .env
-          echo $API_KEY | base64 --decode > .env
-          echo $APPLICATION_ID | base64 --decode > .env
-          echo $index | base64 --decode > .env
+          echo $API_KEY > .env
+          echo $APPLICATION_ID > .env
+          echo $index > .env
           cat .env
       - name: Crawling
         run: docker run -it --env-file=.env -e "CONFIG=$(cat config.json | jq -r tostring)" algolia/docsearch-scraper
