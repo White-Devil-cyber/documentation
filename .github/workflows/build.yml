@@ -29,8 +29,6 @@ jobs:
           cache: npm
       - name: Installation 
         run: npm install && npm install jq
-      - name: Installing Docker
-        run: sudo snap install docker -y
       - name: Crawling
         run: docker run -it --env-file=.env -e "CONFIG=$(cat config.json | jq -r tostring)" algolia/docsearch-scraper
       - name: Build 
