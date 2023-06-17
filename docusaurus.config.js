@@ -33,8 +33,8 @@ const config = {
     locales: ['en'],
   },
   customFields: {
-    'apiKey': process.env.ALGOLIA_API_KEY,
-    'appId': process.env.ALGOLIA_APP_ID,
+    'apiKey': process.env.API_KEY,
+    'appId': process.env.APPLICATION_ID,
   },
   presets: [
     [
