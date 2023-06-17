@@ -10,9 +10,9 @@ permissions:
   contents: read
   
 env: 
-  API_KEY: ${{secrets.API_KEY}}
-  APPLICATION_ID: ${{secrets.APPLICATION_ID}}
-  index: ${{secrets.index}}
+  ALGOLIA_API_KEY: ${{secrets.API_KEY}}
+  ALGOLIA_APP_ID: ${{secrets.APPLICATION_ID}}
+  ALGOLIA_INDEX_NAME: ${{secrets.index}}
   
 jobs:
   build:
@@ -29,12 +29,14 @@ jobs:
           cache: npm
       - name: Installation 
         run: npm install && npm install jq
+      - name: Build 
+        run: npm run build
       - name: Setting .env
         run: |
           touch .env
-          echo $API_KEY > .env
-          echo $APPLICATION_ID > .env
-          echo $index > .env
+          echo $ALGOLIA_API_KEY > .env
+          echo $ALGOLIA_APP_ID > .env
+          echo $ALGOLIA_INDEX_NAME > .env
           cat .env
       - name: Crawling
         run: docker run --env-file=.env -e "CONFIG=$(cat config.json | jq -r tostring)" algolia/docsearch-scraper
