@@ -13,6 +13,8 @@ env:
   ALGOLIA_API_KEY: ${{secrets.API_KEY}}
   ALGOLIA_APP_ID: ${{secrets.APPLICATION_ID}}
   ALGOLIA_INDEX_NAME: ${{secrets.index}}
+  API_KEY: ${{secrets.API_KEY}}
+  APPLICATION_ID: ${{secrets.APPLICATION_ID}}
   
 jobs:
   build:
