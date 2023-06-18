@@ -32,7 +32,7 @@ const config = {
     defaultLocale: 'en',
     locales: ['en'],
   },
-  algolia: {
+  customFiels: {
     apiKey: process.env.API_KEY,
     appId: process.env.APPLICATION_ID,
   },
