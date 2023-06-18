@@ -32,10 +32,6 @@ const config = {
     defaultLocale: 'en',
     locales: ['en'],
   },
-  customFiels: {
-    apiKey: process.env.API_KEY,
-    appId: process.env.APPLICATION_ID,
-  },
   presets: [
     [
       'classic',
@@ -68,7 +64,7 @@ const config = {
       }),
     ],
   ],
-
+  themes: ['@docusaurus/theme-search-algolia'],
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
