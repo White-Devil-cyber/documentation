@@ -64,7 +64,6 @@ const config = {
       }),
     ],
   ],
-  themes: ['@docusaurus/theme-search-algolia'],
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
