@@ -31,7 +31,7 @@ jobs:
           node-version: '16'
           cache: npm
       - name: Installation 
-        run: npm install && npm install jq
+        run: npm install && npm install jq && npm install @docusaurus/preset-classic
       - name: Build 
         run: npm run build
       - name: Setting .env
