@@ -32,9 +32,9 @@ const config = {
     defaultLocale: 'en',
     locales: ['en'],
   },
-  customFields: {
-    'apiKey': process.env.API_KEY,
-    'appId': process.env.APPLICATION_ID,
+  algolia: {
+    apiKey: process.env.API_KEY,
+    appId: process.env.APPLICATION_ID,
   },
   presets: [
     [
